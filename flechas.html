@@ -2,11 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dibujando con Flechas</title>
+    <title>Dibujando en canvas</title>
   </head>
   <body>
-    <canvas id="area_de_dibujo" width="300" height="300"></canvas>
-    <p>Mueve Las Flechas del Teclado para dibujar</p>
+    <h1>Dibujemos :)</h1>
+    <h5>Ingresa un Numero Entero para cambiar el tamaño de la pluma / Ingresa el color en Ingles</h5>
+    <p>
+      <input type = "text" id = "grosor_linea" />
+      <input type = "button" value = "Nuevo Tamaño" id = "bAceptar" />
+      <input type = "text" id = "color_linea" />
+      <input type = "button" value = "Nuevo Color" id = "bColor" />
+    </p>
+    <canvas id="area_de_dibujo" width="1300" height="540"></canvas>
     <script src="eventos.js"></script>
   </body>
 </html>
