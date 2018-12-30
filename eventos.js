@@ -4,7 +4,7 @@ var teclas = {
   RIGTH: 39,
   LEFTH: 37
 };
-document.addEventListener("keyup", dibujarTeclado);
+document.addEventListener("keydown", dibujarTeclado);
 var cuadrito = document.getElementById("area_de_dibujo");
 var lienzo = cuadrito.getContext("2d");
 var x = 150;
@@ -15,7 +15,7 @@ function dibujarLinea(color, xInicial, yinicial, xFinal, yFinal)
 {
   lienzo.beginPath();
   lienzo.strokeStyle = color;
-  lienzo.lineWidth = 3;
+  lienzo.lineWidth = 2;
   lienzo.moveTo(xInicial, yinicial);
   lienzo.lineTo(xFinal, yFinal);
   lienzo.stroke();
@@ -24,7 +24,7 @@ function dibujarLinea(color, xInicial, yinicial, xFinal, yFinal)
 function dibujarTeclado(evento)
 {
   var colorcito = "blue"
-  var movimiento = 10;
+  var movimiento = 1;
   switch (evento.keyCode) {
     case teclas.UP: dibujarLinea(colorcito, x, y, x, y-movimiento); y= y-movimiento; break;
     case teclas.DOWN: dibujarLinea(colorcito, x, y, x, y+movimiento); y= y+movimiento; break;
